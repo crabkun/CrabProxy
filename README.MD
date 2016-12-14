@@ -12,13 +12,15 @@
 * HTTP混淆  
     *   支持连接建立之后第一个数据包为虚假HTTP数据包，主要用于防止某些干扰  
 ##编译
+
  1.  安装GOLANG编译器
     *   Centos安装命令：yum install golang
     *   Ubuntu安装命令：sudo apt-get install golang  
  2. 编译服务端主程序
     *   go build main.go
- 3. 编译完成后，在源码同目录下可以得到可执行文件
-##配置 
+ 3. 编译完成后，在源码同目录下可以得到可执行文件  
+##配置
+
 把下面的内容修改后保存到服务端主程序目录下，文件名为config.json
 ```json
     {
