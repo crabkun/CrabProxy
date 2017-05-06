@@ -34,13 +34,13 @@
     "HTTPReturn200":"~crab~"
     }
 ```
-上面示例配置的意思是，监听80端口，如果是SSH数据包，就转发到127.0.0.1:22。如果是HTTP数据包，就转发到127.0.0.1:801，如果此连接首个数据包包含~crab~关键字，就返回HTTP200状态码。
+上面示例配置的意思是，监听80端口，如果是SSH数据包，就转发到127.0.0.1:22。如果是HTTP数据包，就转发到127.0.0.1:801，如果此连接首个数据包包含\~crab\~关键字，就返回HTTP200状态码。
 
 * Port字段为监听端口
 * TargetSSH字段为转发目标SSH服务器地址和端口（可为空）
 * TargetHTTP字段为转发目标HTTP服务器地址和端口（可为空）
 * HTTPReturn200字段为当连接建立后第一个数据包出现某关键字时返回HTTP 200状态码数据包（可为空）  
-* 注意，TargetSSH和TargetHTTP不能同时为空。HTTPReturn200字段一般用于HTTP混淆SSH，一般给HTTP注射器用，如果你没有使用，可以把HTTPReturn200留空  
+* 注意，TargetSSH和TargetHTTP不能同时为空。HTTPReturn200字段一般用于HTTP混淆SSH，一般给HTTP注射器用，如果你没有使用，一定要把HTTPReturn200留空  
 
 
 ## 有问题反馈
